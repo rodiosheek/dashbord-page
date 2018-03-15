@@ -25,7 +25,7 @@
         <md-divider ng-if="!$last" ng-class="'dashboard-card__divider dashboard-card__divider--static'"></md-divider>
         <!-- Card actions -->
         <md-card-actions layout="row" layout-align="space-around ">
-            <md-button>hide</md-button>
+            <md-button ng-click="$ctrl.delete()">hide</md-button>
             <md-button md-no-ink class="md-primary">show details</md-button>
         </md-card-actions>
     </md-card>

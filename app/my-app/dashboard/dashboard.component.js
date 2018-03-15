@@ -17,6 +17,11 @@ class dashboardController {
         this.itemLimit += 7;
     } 
 
+    deleteCard(cardToDelete) {
+        let index = this.campaigns.indexOf(cardToDelete);
+        this.campaigns.splice(index, 1);
+    }
+
 }
 
 dashboardController.$inject = [ "dashboardService" ];

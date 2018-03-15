@@ -11,6 +11,10 @@ class dashboardCardController {
         this.__getDividerColor(this.campaign.type);
     }
 
+    delete() {
+        this.onDelete();
+    }
+
     __getDividerColor(type) {
         if(!type) return;
         let style = type.split(' ')[0].toLowerCase();
@@ -22,7 +26,8 @@ let dashboardCardComponent = {
     template: dashboardCardTemplate,
     controller: dashboardCardController,
     bindings: {
-        campaign: '<'
+        campaign: '<',
+        onDelete: '&',
     }
 }
 
