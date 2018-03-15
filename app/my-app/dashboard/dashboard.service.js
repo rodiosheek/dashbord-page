@@ -26,6 +26,7 @@ function dashboardService () {
             approved_comments: __random_numbers(10000),
             approved_likes: __random_numbers(1000000),
             approved_posts: __random_numbers(1000),
+            influencers: __random_numbers(100),
             days_passed: __random_numbers(100),
             days_total: __random_numbers(100),
             is_featured: true,
