@@ -1,10 +1,10 @@
 <div class="dashboard">
-    <dashboard-card class="dashboard__card--min-width-25" ng-repeat="campaign in $ctrl.campaigns" campaign="campaign"></dashboard-card>
-    <div layout="column" layout-padding layout-align="center center" class="dashboard__card--min-width-25 dashboard-card--font-lg">
-        <md-button>
-            <span class="md-display-2">+7</span>
-            <br/> 
-            more to show
+    <dashboard-card class="dashboard__card--min-width-25" ng-repeat="campaign in $ctrl.campaigns | limitTo:$ctrl.itemLimit" campaign="campaign"></dashboard-card>
+    <div layout="column" layout-padding layout-align="center center" class="dashboard__card--min-width-25 dashboard-card--font-lg"
+        ng-show="($ctrl.campaigns.length - $ctrl.itemLimit) > 0">
+        <md-button ng-click="$ctrl.showMore()">
+            <span class="md-display-2">+{{ $ctrl.campaigns.length - $ctrl.itemLimit }}</span>
+            <br/> more to show
         </md-button>
     </div>
 </div>

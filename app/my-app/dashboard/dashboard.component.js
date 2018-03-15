@@ -3,16 +3,19 @@ import dashboardTemplate from './dashboard.template.html';
 class dashboardController {
     constructor(dashboardService) {
         //Stub
-        
         this.dashboardService = dashboardService;
         this.campaigns = [];
-        console.log(this);
+        
+        this.itemLimit = 7;
     }
 
     $onInit() {
-        this.campaigns = this.dashboardService.getStubData();
-        console.log(this.campaigns);
+        this.campaigns = this.dashboardService.getStubData(20);
     }
+
+    showMore() {
+        this.itemLimit += 7;
+    } 
 
 }
 
