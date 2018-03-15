@@ -10,12 +10,11 @@ class dashboardController {
 
     $onInit() {
         this.campaigns = this.dashboardService.getStubData();
-        console.log(this.campaigns);
     }
 
 }
 
-dashboardController.$inject = ["dashboardService"];
+dashboardController.$inject = [ "dashboardService" ];
 
 let dashboardComponent = {
     template: dashboardTemplate,
