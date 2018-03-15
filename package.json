@@ -22,7 +22,9 @@
     "angular-aria": "^1.6.9",
     "angular-material": "^1.1.7",
     "angular-messages": "^1.6.9",
-    "angular-ui-router": "1.0.3"
+    "angular-ui-router": "1.0.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "babel-plugin-angularjs-annotate": "^0.8.0",
@@ -59,7 +61,8 @@
     "pretest": "webdriver-manager update",
     "test": "protractor ./test/protractor.conf.js",
     "test-server": "http-server dist -p 9000 -a localhost",
-    "start": "webpack-dev-server --config webpack.config.dev.babel.js --port 9000 --inline --hot",
-    "build": "webpack --config webpack.config.prod.babel.js --progress --profile --colors"
+    "dev": "webpack-dev-server --config webpack.config.dev.babel.js --port 9000 --inline --hot",
+    "build": "webpack --config webpack.config.prod.babel.js --progress --profile --colors",
+    "start": "npm run build && node server.js"
   }
 }
