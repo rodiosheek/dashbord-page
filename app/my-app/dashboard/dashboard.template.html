@@ -1,7 +1,4 @@
 <md-content class="md-padding" layout-xs="column" layout="row">
     <!-- ng repeat -->
-    <dashboard-card></dashboard-card>
-    <dashboard-card></dashboard-card>
-    <dashboard-card></dashboard-card>
-    <dashboard-card></dashboard-card>
+    <dashboard-card ng-repeat="campaign in $ctrl.campaigns" campaign="campaign"></dashboard-card>
 </md-content>

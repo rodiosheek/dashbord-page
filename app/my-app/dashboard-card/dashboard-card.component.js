@@ -2,10 +2,21 @@ import dashboardCardTemplate from './dashboard-card.template.html';
 
 require('./dashboard-card.style.scss');
 
+class dashboardCardController {
+    constructor() {
+        
+    }
+
+    $onInit() {
+        
+    }
+}
+
 let dashboardCardComponent = {
     template: dashboardCardTemplate,
-    controller: function() {
-        this.title = 'dashboardCardComponent --';
+    controller: dashboardCardController,
+    bindings: {
+        campaign: '<'
     }
 }
 
