@@ -2,10 +2,10 @@
     <md-card>
         <md-divider ng-if="!$last" ng-class="['dashboard-card__divider', $ctrl.dividerColor]"></md-divider>
         <!-- Card title -->
-        <md-card-title>
+        <md-card-title layout-padding>
             <md-card-title-text>
-                <span class="md-headline">{{ $ctrl.campaign.name }}</span>
-                <span class="md-subhead">{{ $ctrl.campaign.type }}</span>
+                <span class="md-title">{{ $ctrl.campaign.name }}</span>
+                <span class="md-body-1">{{ $ctrl.campaign.type }}</span>
             </md-card-title-text>
         </md-card-title>
         <md-divider ng-if="!$last"></md-divider>
