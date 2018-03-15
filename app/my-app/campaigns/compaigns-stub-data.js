@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 //I'm sorry for this hard coded data
 const hardCodeCampaignsData = [
     {
@@ -58,3 +60,5 @@ const hardCodeCampaignsData = [
   ];
 
   export default hardCodeCampaignsData;
+
+  /* eslint-enable */

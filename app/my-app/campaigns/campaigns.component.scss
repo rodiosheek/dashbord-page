@@ -1,0 +1,12 @@
+.campaigs {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+    $selector:&;
+
+    &__content {
+        width: 100%;
+    }
+}
