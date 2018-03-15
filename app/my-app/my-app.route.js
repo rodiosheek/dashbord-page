@@ -7,7 +7,7 @@ function myAppRoute($stateProvider, $urlRouterProvider) {
         component: 'dashboard'
       })
       .state('campaigns', {
-        url: '/campaigns/:id',
+        url: '/campaigns/:id/:name',
         component: 'campaigns'
       })
   };

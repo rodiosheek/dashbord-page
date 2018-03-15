@@ -1,3 +1,4 @@
+//I'm sorry for this hard coded data
 const hardCodeCampaignsData = [
     {
       "author_username": "whitneylichfield",

@@ -5,6 +5,7 @@ function campaignsService () {
 
     this.get = (id) => {
         //Fetch data from API with ID param
+        //id
         return Promise.resolve(campaignsData);
     }
 

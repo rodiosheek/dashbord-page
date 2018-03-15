@@ -26,7 +26,7 @@
         <!-- Card actions -->
         <md-card-actions layout="row" layout-align="space-around ">
             <md-button ng-click="$ctrl.delete()">hide</md-button>
-            <md-button md-no-ink class="md-primary" ui-sref="campaigns({id: $ctrl.campaign.id})">show details</md-button>
+            <md-button md-no-ink class="md-primary" ui-sref="campaigns({id: $ctrl.campaign.id, name: $ctrl.campaign.name})">show details</md-button>
         </md-card-actions>
     </md-card>
 </div>
