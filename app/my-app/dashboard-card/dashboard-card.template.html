@@ -1,20 +1,23 @@
-<md-card>
-    <!-- Card title -->
-    <md-card-title>
-        <md-card-title-text>
-            <span class="md-headline">{{ $ctrl.campaign.name }}</span>
-            <span class="md-subhead">{{ $ctrl.campaign.type }}</span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-divider ng-if="!$last"></md-divider>
-    <!-- Card content -->
-    <md-card-content layout="row" layout-align="space-between">
-        {{ $ctrl.campaign.test }}
-    </md-card-content>
-    <md-divider ng-if="!$last"></md-divider>
-    <!-- Card actions -->
-    <md-card-actions layout="row" layout-align="end center">
-        <md-button>hide</md-button>
-        <md-button md-no-ink class="md-primary">show details</md-button>
-    </md-card-actions>
-</md-card>
+<div class="dashboard-card">
+    <md-card>
+        <md-divider ng-if="!$last" ng-class="['dashboard-card__divider', $ctrl.dividerColor]"></md-divider>
+        <!-- Card title -->
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{ $ctrl.campaign.name }}</span>
+                <span class="md-subhead">{{ $ctrl.campaign.type }}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-divider ng-if="!$last"></md-divider>
+        <!-- Card content -->
+        <md-card-content layout="row" layout-align="space-between">
+            {{ $ctrl.campaign.test }}
+        </md-card-content>
+        <md-divider ng-if="!$last" ng-class="'dashboard-card__divider dashboard-card__divider--static'"></md-divider>
+        <!-- Card actions -->
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button>hide</md-button>
+            <md-button md-no-ink class="md-primary">show details</md-button>
+        </md-card-actions>
+    </md-card>
+</div>
