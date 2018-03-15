@@ -1,11 +1,21 @@
 
 function dashboardService () {
-    this.indexes = [0,1,2,3,4,5,6];
 
-    this.getStubData = () => {
+    this.types = [
+        "Challenge",
+        "Influencer campaign",
+        "Giveaway"
+    ];
+
+    //By default return 7 itmes
+    this.getStubData = (itmes_number = 7) => {
         let campaigns = [];
-        this.indexes.forEach(index => campaigns.push(__generate_stub_data(index)))
-        return campaigns;
+        while(itmes_number > 0) {
+            campaigns.push(__generate_stub_data(itmes_number))
+            itmes_number--;
+        }
+        //Sort by ID
+        return campaigns.sort((a,b) => a.id - b.id);
     };
 
     const __generate_stub_data = id => {
@@ -13,7 +23,15 @@ function dashboardService () {
             id: id,
             name: `Random name ${id}`,
             type: 'Challenge',
-            test: __random_numbers(1000)
+            approved_comments: __random_numbers(10000),
+            approved_likes: __random_numbers(1000000),
+            approved_posts: __random_numbers(1000),
+            days_passed: __random_numbers(100),
+            days_total: __random_numbers(100),
+            is_featured: true,
+            num_of_artists: __random_numbers(10),
+            progress: 100,
+            type: this.types[__random_numbers(2)]
         };
     };
 
