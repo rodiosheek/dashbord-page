@@ -1,7 +1,11 @@
 <div class="campaigs">
-    <md-content class="md-padding" ng-class="'campaigs__content'" layout-xs="column" layout="row">
+    <md-content class="md-padding" ng-class="'campaigs__content'" layout-xs="column" layout="column">
         <md-toolbar class="md-whiteframe-1dp site-content-toolbar" layout-align="center start">
             <span style="margin-left: 15px;">{{ $ctrl.campaign_name }}</span>
         </md-toolbar>
+
+        <md-whiteframe class="md-whiteframe-2dp" ng-class="'campaigs__panding-tab'" layout layout-align="start start">
+            <social-filter></social-filter>
+        </md-whiteframe>
     </md-content>
 </div>

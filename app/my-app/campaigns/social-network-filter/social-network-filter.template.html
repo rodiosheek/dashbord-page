@@ -1,0 +1,9 @@
+<div class="social-filter">
+    <md-button class="md-raised" 
+               ng-class="{'md-primary': network.active}" 
+               ng-repeat="network in $ctrl.networks"
+               ng-click="$ctrl.filterBy(network)"
+    >
+        {{ network.title }}
+    </md-button>
+</div>
