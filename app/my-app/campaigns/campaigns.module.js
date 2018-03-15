@@ -5,7 +5,7 @@ import socialNetFilterComponent from './social-network-filter/social-network-fil
 require('./campaigns.component.scss');
 
 angular
-    .module('myApp.campaigns', ['ngMaterial'])
+    .module('myApp.campaigns', [ 'ngMaterial' ])
     .component('campaigns', campaigns)
     .component('socialFilter', socialNetFilterComponent)
     .factory('campaignsService', campaignsService);

@@ -7,7 +7,7 @@ import dashboardCardItemComponent from './dashboard-card-item/dashboard-card-ite
 require('./dashboard.component.scss');
 
 angular
-    .module('myApp.dashboard', ['ngMaterial'])
+    .module('myApp.dashboard', [ 'ngMaterial' ])
     .component('dashboard', dashboard)
     .component('dashboardCard', dashboardCardComponent)
     .component('cardItem', dashboardCardItemComponent)

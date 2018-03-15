@@ -2,10 +2,10 @@ import dashboardTemplate from './dashboard.template.html';
 
 class dashboardController {
     constructor(dashboardService) {
-        //Stub
+        //Stub service
         this.dashboardService = dashboardService;
         this.campaigns = [];
-        
+        //Show by itemLimit itmes
         this.itemLimit = 7;
     }
 
