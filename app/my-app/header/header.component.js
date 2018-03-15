@@ -1,10 +1,15 @@
 import headerTemplate from './header.template.html';
 
-let headerComponent = {
-    template: headerTemplate,
-    controller: function() {
+class headerController {
+    constructor() {
         this.button = 'Dashboard';
     }
+}
+
+
+let headerComponent = {
+    template: headerTemplate,
+    controller: headerController
 }
 
 export default headerComponent;

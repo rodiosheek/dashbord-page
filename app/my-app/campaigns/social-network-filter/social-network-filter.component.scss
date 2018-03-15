@@ -1,0 +1,9 @@
+.social-filter {
+    margin: 15px;
+
+    $selector:&;
+
+    & button {
+        margin: 1px;
+    }
+}
