@@ -1,0 +1,16 @@
+.dashboard {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    $selector:&;
+    &__card--min-width-25 {
+        min-width: 25%;
+    }
+    
+    &__card--font-lg .md-button {
+        font-size: 1.5em;
+    }
+}

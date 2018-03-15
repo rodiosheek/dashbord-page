@@ -6,6 +6,7 @@ class dashboardController {
         
         this.dashboardService = dashboardService;
         this.campaigns = [];
+        console.log(this);
     }
 
     $onInit() {
