@@ -1,3 +1,13 @@
 .card-item {
     text-transform: uppercase;
+
+    $selector:&;
+
+    &__count {
+        font-weight: bold !important;
+    }
+
+    &--width-50 {
+        width: 50%;
+    }
 }

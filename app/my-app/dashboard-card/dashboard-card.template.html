@@ -12,21 +12,21 @@
         <!-- Card content -->
         <md-card-content layout="row" layout-wrap layout-align="space-between">
 
-            <card-item title="'Approved posts'" count="$ctrl.campaign.approved_posts"></card-item>
-            <card-item title="'influencers'" count="$ctrl.campaign.influencers"></card-item>
+            <card-item ng-class="'card-item--width-50'" title="'Approved posts'" count="$ctrl.campaign.approved_posts"></card-item>
+            <card-item ng-class="'card-item--width-50'" title="'influencers'" count="$ctrl.campaign.influencers"></card-item>
 
         </md-card-content>
         <md-card-content layout="row" layout-wrap layout-align="space-between">
 
-            <card-item title="'likes'" count="$ctrl.campaign.approved_likes"></card-item>
-            <card-item title="'comments'" count="$ctrl.campaign.approved_comments"></card-item>
+            <card-item ng-class="'card-item--width-50'" title="'likes'" count="$ctrl.campaign.approved_likes"></card-item>
+            <card-item ng-class="'card-item--width-50'" title="'comments'" count="$ctrl.campaign.approved_comments"></card-item>
 
         </md-card-content>
         <md-divider ng-if="!$last" ng-class="'dashboard-card__divider dashboard-card__divider--static'"></md-divider>
         <!-- Card actions -->
         <md-card-actions layout="row" layout-align="space-around ">
             <md-button ng-click="$ctrl.delete()">hide</md-button>
-            <md-button md-no-ink class="md-primary">show details</md-button>
+            <md-button md-no-ink class="md-primary" ui-sref="campaigns/{{$ctrl.campaign.id}}">show details</md-button>
         </md-card-actions>
     </md-card>
 </div>
