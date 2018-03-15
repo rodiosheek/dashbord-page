@@ -7,7 +7,8 @@ class campaignsController {
     }
 
     $onInit() {
-        
+        //get stub data form service
+        this.campaignsService.get().then(data => this.data = data);
     }
 
 }

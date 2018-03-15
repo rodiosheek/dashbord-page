@@ -10,7 +10,7 @@ class dashboardController {
     }
 
     $onInit() {
-        this.campaigns = this.dashboardService.getStubData(20);
+        this.dashboardService.getStubData(20).then(data => this.campaigns = data);
     }
 
     showMore() {
