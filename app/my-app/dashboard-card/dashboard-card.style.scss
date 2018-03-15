@@ -1,0 +1,40 @@
+//Card type color
+$color-giveaway:   #7583c4;
+$color-influencer: #5aa3cc;
+$color-challenge:  #9C27B0;
+$color-static:     #62bba2;
+
+.dashboard-card {
+
+    $selector:&;
+
+    & md-card {
+        overflow-y: hidden;
+    }
+
+    &__divider {
+        border-top-width: 5px;
+
+        $selector:&;
+
+        &--giveaway {
+            border-top-color: $color-giveaway;
+        }
+
+        &--influencer {
+            border-top-color: $color-influencer;
+        }
+
+        &--challenge {
+            border-top-color: $color-challenge;
+        }
+
+        &--static {
+            border-top-color: $color-static;
+        }
+    }
+
+    .md-divider--red {
+        border-top-color: red;
+    }
+}
