@@ -22,6 +22,7 @@ class dashboardCardController {
     }
 }
 
+
 let dashboardCardComponent = {
     template: dashboardCardTemplate,
     controller: dashboardCardController,

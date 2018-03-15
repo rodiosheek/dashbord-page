@@ -6,6 +6,10 @@ function myAppRoute($stateProvider, $urlRouterProvider) {
         url: '/dashboard',
         component: 'dashboard'
       })
+      .state('campaigns', {
+        url: '/campaigns/:id',
+        component: 'campaigns'
+      })
   };
   /* @ngInject */
   export default myAppRoute;
