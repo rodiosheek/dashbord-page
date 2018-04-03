@@ -22,7 +22,11 @@
             <card-item ng-class="'card-item--width-50'" title="'comments'" count="$ctrl.campaign.approved_comments"></card-item>
 
         </md-card-content>
-        <md-divider ng-if="!$last" ng-class="'dashboard-card__divider dashboard-card__divider--static'"></md-divider>
+        <div class="dashboard-card__days-info md-caption description">
+          <span>{{ ($ctrl.campaign.days_passed / $ctrl.campaign.days_total) * 100 | number: 0}}%</span>
+          ({{ $ctrl.campaign.days_passed }} / {{ $ctrl.campaign.days_total}} days)
+        </div>
+        <md-progress-linear class="dashboard-card__progress" md-mode="determinate" value="{{ ($ctrl.campaign.days_passed / $ctrl.campaign.days_total) * 100 }}"></md-progress-linear>
         <!-- Card actions -->
         <md-card-actions layout="row" layout-align="space-around ">
             <md-button ng-click="$ctrl.delete()">hide</md-button>

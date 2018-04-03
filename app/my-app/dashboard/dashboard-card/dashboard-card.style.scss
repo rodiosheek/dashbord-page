@@ -37,4 +37,15 @@ $color-static:     #62bba2;
     .md-divider--red {
         border-top-color: red;
     }
+
+    &__days-info {
+      margin: 4px 10px;
+    }
+
+  &__progress {
+    $selector:&;
+    & .md-bar {
+      background-color: #03bfa5;
+    }
+  }
 }

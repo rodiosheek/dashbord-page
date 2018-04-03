@@ -11,14 +11,20 @@ function dashboardService () {
     this.getStubData = (itmes_number = 7) => {
         let campaigns = [];
         while(itmes_number > 0) {
-            campaigns.push(__generate_stub_data(itmes_number))
+            campaigns.push(__generate_stub_data(itmes_number));
             itmes_number--;
         }
-        //Fetch data from API 
+        //Fetch data from API
         return Promise.resolve(campaigns.sort((a,b) => a.id - b.id));
     };
 
     const __generate_stub_data = id => {
+        let days_total = __random_numbers(100);
+        let days_random = __random_numbers(100);
+        let days_passed = days_random > days_total ? days_total : days_random;
+
+        console.log( days_total, '/', days_random , '=', days_passed);
+
         return {
             id:                id,
             name:              `Random name ${id}`,
@@ -27,8 +33,8 @@ function dashboardService () {
             approved_likes:    __random_numbers(1000000),
             approved_posts:    __random_numbers(1000),
             influencers:       __random_numbers(100),
-            days_passed:       __random_numbers(100),
-            days_total:        __random_numbers(100),
+            days_passed:       days_passed,
+            days_total:        days_total,
             is_featured:       true,
             num_of_artists:    __random_numbers(10),
             progress:          100,

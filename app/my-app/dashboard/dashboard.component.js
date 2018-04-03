@@ -10,12 +10,15 @@ class dashboardController {
     }
 
     $onInit() {
-        this.dashboardService.getStubData(20).then(data => this.campaigns = data);
+        this.dashboardService.getStubData(20).then(data => {
+          this.campaigns = data;
+          console.log(this);
+        });
     }
 
     showMore() {
         this.itemLimit += 7;
-    } 
+    }
 
     deleteCard(cardToDelete) {
         let index = this.campaigns.indexOf(cardToDelete);
